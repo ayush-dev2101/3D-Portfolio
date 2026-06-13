@@ -6,8 +6,8 @@ type ParticlesProps = {
   count?: number;
 };
 
-const Particles = ({count = 1000}: ParticlesProps) => {
-
+// The Particles Spraying on the Room Model
+const Particles = ({ count = 1000 }: ParticlesProps) => {
   const pointsRef = useRef<THREE.Points>(null!);
 
   const particles = useMemo(() => {

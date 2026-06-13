@@ -1,4 +1,6 @@
 import Hero from "./sections/Hero";
+import ShowcaseSection from "./sections/ShowcaseSection";
+import Test from "./Test";
 
 const App = () => {
   return (
@@ -9,6 +11,7 @@ const App = () => {
           Portfolio
         </h1>
         <Hero />
+        <ShowcaseSection />
       </div>
     </>
   );

@@ -2,8 +2,31 @@ import { SparklesCore } from "../components/ui/sparkles";
 import { words } from "../constants";
 import Button from "../components/Button.tsx";
 import HeroExperience from "../components/HeroModels/HeroExperience.tsx";
+import AnimatedCounter from "../components/AnimatedCounter.tsx";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
+  useGSAP(() =>
+    gsap.fromTo(
+      ".hero-main",
+      // Initial
+      {
+        y: 50,
+        opacity: 1,
+        filter: "blur(10px)",
+      },
+      //Final
+      {
+        y: 0,
+        stagger: 1.5,
+        filter: "blur(0px)",
+        duration: 2,
+        ease: "power2.out",
+      },
+    ),
+  );
   return (
     <section id="hero" className="relative overflow-hidden bg-black">
       {/* Animated Background  */}
@@ -19,10 +42,10 @@ const Hero = () => {
       </div>
       <div className="hero-layout gap-10 relative z-20">
         {/* LEFT: HERO CONTENT */}
-        <header className="relative z-30 flex flex-col justify-center md:w-1/2 w-full md:px-20 px-5">
+        <header className="hero-main relative z-30 flex flex-col justify-center md:w-1/2 w-full md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="flex flex-col items-start gap-4">
-              <h1 className="flex items-center gap-1">
+              <h1 className="hero-main-title flex items-center gap-1">
                 <span className="">Shaping</span>
                 <span className="slide h-12 md:h-14 xl:h-16 ">
                   <span className="wrapper">
@@ -45,7 +68,7 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
               <div className="text-center">
-                <h1 className="text-white text-2xl font-semibold">
+                <h1 className="text-amber-100 text-4xl font-semibold">
                   Hi, I'm Ayush
                 </h1>
                 {/* BlueLine under Name */}
@@ -73,6 +96,8 @@ const Hero = () => {
           </div>
         </figure>
       </div>
+      {/* Animated Counter Section */}
+      <AnimatedCounter />
     </section>
   );
 };
