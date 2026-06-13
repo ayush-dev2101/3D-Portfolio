@@ -4,7 +4,10 @@ const App = () => {
   return (
     <>
       <div>
-        <h1 className="text-5xl underline">Welcome to my 3D Portfolio</h1>
+        <h1 className="text-5xl text-center mt-15 text-zinc-100 font-extrabold">
+          {" "}
+          Portfolio
+        </h1>
         <Hero />
       </div>
     </>

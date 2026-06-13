@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
       <div className="hero-layout gap-10 relative z-20">
         {/* LEFT: HERO CONTENT */}
-        <header className="flex flex-col justify-center md:w-1/2 w-full md:px-20 px-5">
+        <header className="relative z-30 flex flex-col justify-center md:w-1/2 w-full md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="flex flex-col items-start gap-4">
               <h1 className="flex items-center gap-1">
@@ -44,15 +44,16 @@ const Hero = () => {
               </h1>
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
-                            <div className="text-center">
+              <div className="text-center">
                 <h1 className="text-white text-2xl font-semibold">
                   Hi, I'm Ayush
                 </h1>
-
+                {/* BlueLine under Name */}
                 <div className="relative mt-1 w-60 mx-auto h-[2px] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse" />
                 </div>
               </div>
+              {/* Expression */}
               <p className="text-shadow-white-50 md:text-xl relative z-10 pointer-events-none">
                 A developer based in India with a passion of code.
               </p>

@@ -4,10 +4,13 @@ Command: npx gltfjsx@6.5.3 optimized-room.glb -t
 */
 
 import * as THREE from "three";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
+import { useMemo } from "react";
 
 import type { GLTF } from "three-stdlib";
 import type { ThreeElements } from "@react-three/fiber";
+
+import mat1Texture from "../../assets/images/textures/mat1.png";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -52,6 +55,21 @@ type GLTFResult = GLTF & {
 };
 
 export function Room(props: ThreeElements["group"]) {
+  // Wall Texture
+  const texture = useTexture(mat1Texture);
+
+  const wallMaterial = useMemo(
+    () => 
+      new THREE.MeshPhongMaterial({
+        map: texture,
+      }),
+      [texture]
+  )
+  // Built-In THREE.JS Phong Material
+  const curtainMaterial = useMemo(
+    () => new THREE.MeshPhongMaterial({ color: "#d90429" }),
+    []
+  );
   const { nodes, materials } = useGLTF(
     "/models/optimized-room.glb",
   ) as unknown as GLTFResult;
@@ -59,11 +77,11 @@ export function Room(props: ThreeElements["group"]) {
     <group {...props} dispose={null}>
       <mesh
         geometry={nodes._________6_blinn1_0.geometry}
-        material={materials.blinn1}
+        material={curtainMaterial}
       />
       <mesh
         geometry={nodes.body1_blinn1_0.geometry}
-        material={materials.blinn1}
+        material={wallMaterial}
       />
       <mesh
         geometry={nodes.cabin_blinn1_0.geometry}
