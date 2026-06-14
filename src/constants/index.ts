@@ -1,3 +1,22 @@
+import Code from "../assets/images/code.svg"
+import Concepts from "../assets/images/concepts.svg"
+import Ideas from "../assets/images/ideas.svg"
+import Design from "../assets/images/designs.svg"
+
+//Company's Logo
+import Logo1 from "../assets/images/logos/company-logo-1.png";
+import Logo2 from "../assets/images/logos/company-logo-2.png";
+import Logo3 from "../assets/images/logos/company-logo-3.png";
+import Logo4 from "../assets/images/logos/company-logo-4.png";
+import Logo5 from "../assets/images/logos/company-logo-5.png";
+import Logo6 from "../assets/images/logos/company-logo-6.png";
+import Logo7 from "../assets/images/logos/company-logo-7.png";
+import Logo8 from "../assets/images/logos/company-logo-8.png";
+import Logo9 from "../assets/images/logos/company-logo-9.png";
+import Logo10 from "../assets/images/logos/company-logo-10.png";
+import Logo11 from "../assets/images/logos/company-logo-11.png";
+
+
 type NavLink = {
   name: string;
   link: string;
@@ -15,6 +34,7 @@ type CounterItem = {
 };
 
 type LogoIcon = {
+  name: string
   imgPath: string;
 };
 
@@ -82,35 +102,41 @@ export const navLinks: NavLink[] = [
 ];
 
 export const words: Word[] = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Code", imgPath: Code },
+  { text: "Concepts", imgPath: Concepts },
+  { text: "Ideas", imgPath: Ideas },
+  { text: "Designs", imgPath: Design },
+  { text: "Code", imgPath: Code },
+  { text: "Concepts", imgPath: Concepts },
+  { text: "Ideas", imgPath: Ideas },
+  { text: "Designs", imgPath: Design },
 ];
 
 export const counterItems: CounterItem[] = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 2, suffix: "+", label: "Years of Experience" },
+  { value: 1, suffix: "+", label: "Satisfied Clients" },
+  { value: 9, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
 export const logoIconsList: LogoIcon[] = [
-  { imgPath: "/images/logos/company-logo-1.png" },
-  { imgPath: "/images/logos/company-logo-2.png" },
-  { imgPath: "/images/logos/company-logo-3.png" },
-  { imgPath: "/images/logos/company-logo-4.png" },
-  { imgPath: "/images/logos/company-logo-5.png" },
-  { imgPath: "/images/logos/company-logo-6.png" },
-  { imgPath: "/images/logos/company-logo-7.png" },
-  { imgPath: "/images/logos/company-logo-8.png" },
-  { imgPath: "/images/logos/company-logo-9.png" },
-  { imgPath: "/images/logos/company-logo-10.png" },
-  { imgPath: "/images/logos/company-logo-11.png" },
+  { name: "Docker",
+    imgPath: Logo1 },
+  { name: "Adidas",
+    imgPath: Logo2 },
+  { name: "Kubernetes",
+    imgPath: Logo3 },
+  { name: "TCS",
+    imgPath: Logo4 },
+
+  { name:"Infosys",imgPath: Logo5 },
+  { name:"HCL",imgPath: Logo6 },
+  { name:"ChatGPT",imgPath: Logo7 },
+  { name: "Claude",
+    imgPath: Logo8 },
+  { name:"Google",imgPath: Logo9 },
+  { name:"Microsoft",imgPath: Logo10 },
+  { name:"EY",imgPath: Logo11 },
 ];
 
 export const abilities: Ability[] = [

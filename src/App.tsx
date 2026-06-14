@@ -1,17 +1,23 @@
+import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
-import Test from "./Test";
+import LogoSection from "./sections/LogoSection";
 
 const App = () => {
   return (
     <>
       <div>
-        <h1 className="text-5xl text-center mt-15 text-zinc-100 font-extrabold">
+        {/* <h1 className="text-5xl text-center mt-5 text-zinc-100 font-extrabold">
           {" "}
           Portfolio
-        </h1>
+        </h1> */}
+        <Navbar />
         <Hero />
         <ShowcaseSection />
+        {/* For the LogoSection we'll change the images and the experience  */}
+
+
+        {/* <LogoSection /> */}
       </div>
     </>
   );

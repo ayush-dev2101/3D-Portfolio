@@ -12,7 +12,7 @@ const HeroExperience = () => {
   return (
     <Canvas
       style={{ width: "100%", height: "100%" }} // ← add this
-      camera={{ position: [0, 0, 15], fov: 45 }}
+      camera={{ position: [5, 4, 12], fov: 45 }}
     >
       <OrbitControls
         enablePan={false}
@@ -24,12 +24,12 @@ const HeroExperience = () => {
       />
       <group
         scale={isMobile ? 0.7 : 1}
-        position={[0, -3.5, 0]}
+        position={isMobile ? [2, -2, 0] : [2, -2, 0]}
         rotation={[0, -Math.PI / 5, 0]}
       >
         <HeroLights />
-        <Particles count={80}/>
-        <Room scale={[1.4, 1.3, 1.3]}/>
+        <Particles count={80} />
+        <Room scale={[1.4, 1.3, 1.3]} />
       </group>
     </Canvas>
   );
