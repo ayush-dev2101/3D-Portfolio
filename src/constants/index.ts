@@ -3,7 +3,7 @@ import Concepts from "../assets/images/concepts.svg"
 import Ideas from "../assets/images/ideas.svg"
 import Design from "../assets/images/designs.svg"
 
-//Company's Logo
+//Company's Logo Example
 import Logo1 from "../assets/images/logos/company-logo-1.png";
 import Logo2 from "../assets/images/logos/company-logo-2.png";
 import Logo3 from "../assets/images/logos/company-logo-3.png";
@@ -21,6 +21,9 @@ import seo from "../assets/images/seo.svg";
 import chat from "../assets/images/chat.svg";
 import time from "../assets/images/time.svg";
 
+
+//Experience Company's 
+import Exp1 from "../assets/images/1Stop_logo.webp";
   
 
 type NavLink = {
@@ -219,8 +222,31 @@ export const techStackIcons: TechStackIcon[] = [
   },
 ];
 
-export const expCards: ExpCard[] = [
-  // paste your existing objects here unchanged
+export const expCards: ExpCard[] = [ 
+  {
+    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    imgPath: Exp1,
+    logoPath: "/images/logo1.png",
+    title: "Frontend Developer",
+    date: "January 2023 - Present",
+    responsibilities: [
+      "Developed and maintained user-facing features for the Hostinger website.",
+      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
+      "Optimized web applications for maximum speed and scalability.",
+    ],
+  },
+  {
+    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    imgPath: "/images/exp2.png",
+    logoPath: "/images/logo2.png",
+    title: "Full Stack Developer",
+    date: "June 2020 - December 2023",
+    responsibilities: [
+      "Led the development of Docker's web applications, focusing on scalability.",
+      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
+      "Contributed to open-source projects that were used with the Docker ecosystem.",
+    ],
+  },
 ];
 
 export const expLogos: ExpLogo[] = [

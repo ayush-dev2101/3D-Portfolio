@@ -3,6 +3,7 @@ import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
 // import LogoSection from "./sections/LogoSection";
 import FeatureCard from "./sections/FeatureCard";
+import Experience from "./sections/Experience";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
 
         {/* <LogoSection /> */}
         <FeatureCard />
+        <Experience />
       </div>
     </>
   );
