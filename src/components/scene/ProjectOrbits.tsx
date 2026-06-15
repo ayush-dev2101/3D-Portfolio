@@ -47,7 +47,7 @@ const positions = [
   {
     // Right side position of the Project card
     containerClass:
-      "md:right-[5%] lg:right-[7%] xl:right-[15%] md:top-[40%] -translate-y-2.3",
+      "md:right-[10%] lg:right-[12%] xl:right-[18%] md:top-[40%] -translate-y-2.3",
     direction: 1, // floating direction offset
   },
 ];

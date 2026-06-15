@@ -3,18 +3,6 @@ import Concepts from "../assets/images/concepts.svg"
 import Ideas from "../assets/images/ideas.svg"
 import Design from "../assets/images/designs.svg"
 
-//Company's Logo Example
-import Logo1 from "../assets/images/logos/company-logo-1.png";
-import Logo2 from "../assets/images/logos/company-logo-2.png";
-import Logo3 from "../assets/images/logos/company-logo-3.png";
-import Logo4 from "../assets/images/logos/company-logo-4.png";
-import Logo5 from "../assets/images/logos/company-logo-5.png";
-import Logo6 from "../assets/images/logos/company-logo-6.png";
-import Logo7 from "../assets/images/logos/company-logo-7.png";
-import Logo8 from "../assets/images/logos/company-logo-8.png";
-import Logo9 from "../assets/images/logos/company-logo-9.png";
-import Logo10 from "../assets/images/logos/company-logo-10.png";
-import Logo11 from "../assets/images/logos/company-logo-11.png";
 
 //Feature Cards
 import seo from "../assets/images/seo.svg";
@@ -24,69 +12,74 @@ import time from "../assets/images/time.svg";
 
 //Experience Company's 
 import Exp1 from "../assets/images/1Stop_logo.webp";
+import Exp2 from "../assets/images/stpi-logo.svg";
   
 
-type NavLink = {
+//Experience Company's Logo
+import stopLogo from "../assets/images/stop-ai.svg" 
+import stpiLogo from "../assets/images/stpi-logo2.svg"
+
+export type NavLink = {
   name: string;
   link: string;
 };
 
-type Word = {
+export type Word = {
   text: string;
   imgPath: string;
 };
 
-type CounterItem = {
+export type CounterItem = {
   value: number;
   suffix: string;
   label: string;
 };
 
-type LogoIcon = {
+export type LogoIcon = {
   name: string
   imgPath: string;
 };
 
-type Ability = {
+export type Ability = {
   imgPath: string;
   title: string;
   desc: string;
 };
 
-type TechStackImg = {
+export type TechStackImg = {
   name: string;
   imgPath: string;
 };
 
-type TechStackIcon = {
+export type TechStackIcon = {
   name: string;
   modelPath: string;
   scale: number;
   rotation: [number, number, number];
 };
 
-type ExpCard = {
+export type ExpCard = {
   review: string;
   imgPath: string;
-  logoPath: string;
+  logoPath: string,
   title: string;
   date: string;
   responsibilities: string[];
 };
 
-type ExpLogo = {
+export type ExpLogo = {
   name: string;
   imgPath: string;
 };
 
-type Testimonial = {
+export type Testimonial = {
   name: string;
   mentions: string;
   review: string;
   imgPath: string;
 };
 
-type SocialImg = {
+export type SocialImg = {
   name: string;
   imgPath: string;
 };
@@ -128,25 +121,7 @@ export const counterItems: CounterItem[] = [
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
-export const logoIconsList: LogoIcon[] = [
-  { name: "Docker",
-    imgPath: Logo1 },
-  { name: "Adidas",
-    imgPath: Logo2 },
-  { name: "Kubernetes",
-    imgPath: Logo3 },
-  { name: "TCS",
-    imgPath: Logo4 },
 
-  { name:"Infosys",imgPath: Logo5 },
-  { name:"HCL",imgPath: Logo6 },
-  { name:"ChatGPT",imgPath: Logo7 },
-  { name: "Claude",
-    imgPath: Logo8 },
-  { name:"Google",imgPath: Logo9 },
-  { name:"Microsoft",imgPath: Logo10 },
-  { name:"EY",imgPath: Logo11 },
-];
 
 export const abilities: Ability[] = [
   {
@@ -224,11 +199,11 @@ export const techStackIcons: TechStackIcon[] = [
 
 export const expCards: ExpCard[] = [ 
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Ayush's brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: Exp1,
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    logoPath: stopLogo,
+    title: "Backend Developer",
+    date: "July 2025- August 2025",
     responsibilities: [
       "Developed and maintained user-facing features for the Hostinger website.",
       "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
@@ -236,9 +211,9 @@ export const expCards: ExpCard[] = [
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    review: "Ayush's contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    imgPath: Exp2,
+    logoPath: stpiLogo,
     title: "Full Stack Developer",
     date: "June 2020 - December 2023",
     responsibilities: [

@@ -269,7 +269,7 @@ section {
   }
 }
   .card-border {
-    @apply border border-black-50 bg-black-100;
+    @apply relative border border-black-50 bg-black-100;
   }
 
   .marquee-item {
@@ -287,10 +287,14 @@ section {
   .timeline-logo {
     @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
   }
-
+/* Experience-card 1 */
   .exp-card-wrapper {
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
   }
+/* Experience-card 2 */
+/* .exp-card-wrapper {
+  @apply flex flex-col-reverse md:flex-row md:gap-16 gap-10 items-center;
+} */
 
   .gradient-edge {
     @apply w-36 h-full absolute bottom-0 z-20;
