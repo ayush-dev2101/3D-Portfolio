@@ -19,6 +19,13 @@ import Exp2 from "../assets/images/stpi-logo.svg";
 import stopLogo from "../assets/images/stop-ai.svg" 
 import stpiLogo from "../assets/images/stpi-logo2.svg"
 
+//3d TechStack Models
+import reactModel from "../assets/models/react_logo-transformed.glb";
+import pythonModel from "../assets/models/python-transformed.glb";
+import backendModel from "../assets/models/node-transformed.glb";
+import interactiveDevModel from "../assets/models/three.js-transformed.glb";
+import gitModel from "../assets/models/git-svg-transformed.glb";
+
 export type NavLink = {
   name: string;
   link: string;
@@ -141,6 +148,8 @@ export const abilities: Ability[] = [
   },
 ];
 
+//Image for 
+
 export const techStackImgs: TechStackImg[] = [
   {
     name: "React Developer",
@@ -164,34 +173,36 @@ export const techStackImgs: TechStackImg[] = [
   },
 ];
 
+//3d Model for Tech Stack
+
 export const techStackIcons: TechStackIcon[] = [
   {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
+    name: "React",
+    modelPath: reactModel,
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
+    name: "Python",
+    modelPath: pythonModel,
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
+    name: "Backend",
+    modelPath: backendModel,
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
+    name: "Interactive",
+    modelPath: interactiveDevModel,
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
+    name: "Project",
+    modelPath: gitModel,
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
