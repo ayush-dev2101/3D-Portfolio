@@ -16,6 +16,12 @@ import Logo9 from "../assets/images/logos/company-logo-9.png";
 import Logo10 from "../assets/images/logos/company-logo-10.png";
 import Logo11 from "../assets/images/logos/company-logo-11.png";
 
+//Feature Cards
+import seo from "../assets/images/seo.svg";
+import chat from "../assets/images/chat.svg";
+import time from "../assets/images/time.svg";
+
+  
 
 type NavLink = {
   name: string;
@@ -141,17 +147,17 @@ export const logoIconsList: LogoIcon[] = [
 
 export const abilities: Ability[] = [
   {
-    imgPath: "/images/seo.png",
+    imgPath: seo,
     title: "Quality Focus",
     desc: "Delivering high-quality results while maintaining attention to every detail.",
   },
   {
-    imgPath: "/images/chat.png",
+    imgPath: chat,
     title: "Reliable Communication",
     desc: "Keeping you updated at every step to ensure transparency and clarity.",
   },
   {
-    imgPath: "/images/time.png",
+    imgPath: time,
     title: "On-Time Delivery",
     desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
   },

@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
-import LogoSection from "./sections/LogoSection";
+// import LogoSection from "./sections/LogoSection";
+import FeatureCard from "./sections/FeatureCard";
 
 const App = () => {
   return (
@@ -16,8 +17,8 @@ const App = () => {
         <ShowcaseSection />
         {/* For the LogoSection we'll change the images and the experience  */}
 
-
         {/* <LogoSection /> */}
+        <FeatureCard />
       </div>
     </>
   );
