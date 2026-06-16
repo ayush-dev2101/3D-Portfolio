@@ -39,7 +39,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
   hideBorder = false,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
+  // const innerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const card = cardRef.current;
@@ -139,6 +139,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       <div
         ref={cardRef}
         data-glow
+        data-hide-border={hideBorder}
         style={getInlineStyles()}
         className={`
           ${getSizeClasses()}

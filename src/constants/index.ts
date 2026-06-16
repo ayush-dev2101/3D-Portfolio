@@ -26,6 +26,20 @@ import backendModel from "../assets/models/node-transformed.glb";
 import interactiveDevModel from "../assets/models/three.js-transformed.glb";
 import gitModel from "../assets/models/git-svg-transformed.glb";
 
+
+import {
+  Mail,
+  Phone,
+  MapPin
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+export type contactInfo = {
+  icon: LucideIcon;
+  label: string;
+  value: string
+}
+
 export type NavLink = {
   name: string;
   link: string;
@@ -79,12 +93,6 @@ export type ExpLogo = {
   imgPath: string;
 };
 
-export type Testimonial = {
-  name: string;
-  mentions: string;
-  review: string;
-  imgPath: string;
-};
 
 export type SocialImg = {
   name: string;
@@ -249,10 +257,24 @@ export const expLogos: ExpLogo[] = [
     imgPath: "/images/logo3.png",
   },
 ];
+export const contactInfo: contactInfo[] = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "max.ayushhh@gmail.com"
 
-export const testimonials: Testimonial[] = [
-  // paste your existing testimonial objects here unchanged
-];
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "📞+91 63703 55930"
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "📍Bhubaneswar, India"
+  }
+]
 
 export const socialImgs: SocialImg[] = [
   {
@@ -272,3 +294,4 @@ export const socialImgs: SocialImg[] = [
     imgPath: "/images/linkedin.png",
   },
 ];
+
