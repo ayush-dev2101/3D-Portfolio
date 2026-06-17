@@ -35,7 +35,7 @@ const TechStack = () => {
               key={icon.name}
               className="card-border tech-card overflow-hidden group rounded-full 
              aspect-3/4 xl:aspect-2/3
-             max-h-420px mx-auto bg-transparent"
+             max-h-420px mx-auto"
             >
               <div className="tech-card-animated-bg"></div>
 

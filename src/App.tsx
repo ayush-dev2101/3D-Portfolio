@@ -8,6 +8,7 @@ const FeatureCard = lazy(() => import("./sections/FeatureCard"));
 const Experience = lazy(() => import("./sections/Experience"));
 const TechStack = lazy(() => import("./sections/TechStack"));
 const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./sections/Footer"));
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Experience />
           <TechStack />
           <Contact />
+          <Footer />
         </Suspense>
       </div>
     </>

@@ -267,6 +267,10 @@ section {
       -translate-y-1/2 flex justify-center items-center overflow-hidden;
   }
 }
+
+.canvas {
+  background: transparent !important;
+}
   .card-border {
     @apply border border-black-50 bg-black-100;
   }
@@ -494,7 +498,7 @@ section {
     conic-gradient(
       from calc((var(--start) - 15) * 1deg),
       #ffffff1f 0deg,
-      white,
+      white,  
       #ffffff00 100deg
     );
   mask-composite: intersect;
