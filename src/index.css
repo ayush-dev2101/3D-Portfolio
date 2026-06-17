@@ -366,35 +366,7 @@ section {
   }
 }
 
-/* The animation for Hi/Hello Emoji */
-@keyframes wave {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
 
-  15% {
-    transform: rotate(14deg);
-  }
-
-  30% {
-    transform: rotate(-8deg);
-  }
-
-  45% {
-    transform: rotate(14deg);
-  }
-
-  60% {
-    transform: rotate(-4deg);
-  }
-}
-
-.wave-hand {
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: wave 2s infinite;
-}
 
 /* Hero text slider starts */
 .slide {
