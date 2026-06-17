@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { useAnimation } from "framer-motion";
 //This sparkles is in the background from 21st.dev
 type ParticlesProps = {
   id?: string;
@@ -36,17 +35,9 @@ export const SparklesCore = (props: ParticlesProps) => {
       setInit(true);
     });
   }, []);
-  const controls = useAnimation();
 
-  const particlesLoaded = async (container?: Container) => {
-    if (container) {
-      controls.start({
-        opacity: 1,
-        transition: {
-          duration: 1,
-        },
-      });
-    }
+  const particlesLoaded = async (_container?: Container) => {
+    // Container loaded - particles are ready
   };
 
   const generatedId = useId();
@@ -68,7 +59,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               zIndex: 1,
             },
 
-            fpsLimit: 120,
+            fpsLimit: 60,
             interactivity: {
               events: {
                 onClick: {

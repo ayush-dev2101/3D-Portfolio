@@ -38,7 +38,7 @@ const ShowcaseSection = () => {
       {/* Main interactive area */}
       <div className="relative w-full max-w-7xl flex-1 flex flex-col md:flex-row items-center justify-center min-h-[400px] md:min-h-[550px] lg:min-h-[650px] px-6">
         {/* Centered Robot Canvas (Focal Point) */}
-        <div className="relative z-10 w-full h-full flex items-center justify-center flex-none">
+        <div className="relative z-10 w-full min-h-[500px] flex items-center justify-center flex-none">
           <RobotScene />
         </div>
 

@@ -207,4 +207,3 @@ export function Room(props: ThreeElements["group"]) {
   );
 }
 
-useGLTF.preload("/models/optimized-room.glb");

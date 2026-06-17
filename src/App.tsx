@@ -1,12 +1,13 @@
+import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
-import ShowcaseSection from "./sections/ShowcaseSection";
-// import LogoSection from "./sections/LogoSection";
-import FeatureCard from "./sections/FeatureCard";
-import Experience from "./sections/Experience";
 
-import TechStack from "./sections/TechStack";
-import Contact from "./sections/Contact";
+// Lazy-load below-fold sections to reduce initial bundle size
+const ShowcaseSection = lazy(() => import("./sections/ShowcaseSection"));
+const FeatureCard = lazy(() => import("./sections/FeatureCard"));
+const Experience = lazy(() => import("./sections/Experience"));
+const TechStack = lazy(() => import("./sections/TechStack"));
+const Contact = lazy(() => import("./sections/Contact"));
 
 const App = () => {
   return (
@@ -14,11 +15,13 @@ const App = () => {
       <div>
         <Navbar />
         <Hero />
-        <ShowcaseSection />
-        <FeatureCard />
-        <Experience />
-        <TechStack />
-        <Contact />
+        <Suspense fallback={<div className="min-h-screen bg-black" />}>
+          <ShowcaseSection />
+          <FeatureCard />
+          <Experience />
+          <TechStack />
+          <Contact />
+        </Suspense>
       </div>
     </>
   );
