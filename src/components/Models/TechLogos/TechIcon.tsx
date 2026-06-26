@@ -1,13 +1,6 @@
-// Loads a `.glb` model {GLTF format}
-// Adds basic lighting
-// Applies environment reflections for realism
-// Wraps the model in a floating animation
-// Optinally tweaks the material (like setting a white color on a specific mesh)
-// Disables zoom using OrbitControls
-
 import type { TechStackIcon } from "@/constants";
 import { Canvas } from "@react-three/fiber";
-import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
+import { Float, OrbitControls, useGLTF } from "@react-three/drei";
 
 type TechIconProps = {
   model: TechStackIcon;
